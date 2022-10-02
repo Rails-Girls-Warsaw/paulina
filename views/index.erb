@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Menu</title>    
+        <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+        <link href="/stylesheet/style.css" rel="stylesheet" />
+            </head>
+    <img src="https://goodfoodbaddie.com/wp-content/uploads/elementor/thumbs/the-best-pineapple-shrimp-skewers-for-grilling-ort1ojyskzqzdc446wg2foei89mcd7o17nnnu8kge8.jpg" rel="stylesheet" />
+    <body class="container">
+       <h1> <%= @title %> </h1>
+        <form action="cast" method="post">
+            <ul class="unstyled">
+            <% Choices.each do |value, text| %>
+                <li>
+                    <label class="radio"> 
+                    <input type="radio" name="vote" value= "<%= value %>"/>
+                    <%= text %>
+                    </label>
+                </li>
+            <% end %>
+            </ul>
+
+            <button type="submit" class="btn btn-primary"> Poproszę</button>
+        </form>
+        
+    </body>
+</html>
+
